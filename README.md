@@ -56,35 +56,40 @@ This starts the web app where users can upload PDFs, fetch papers using DOIs or 
 
 
 # practical implementation images
-- **Search for Papers:
+- **Search for Papers**:
+![WhatsApp Image 2025-04-20 at 21 05 46_9c7027e0](https://github.com/user-attachments/assets/0554d4ba-920c-462f-898f-c9a6e29cf004)
 
 Use the Search bar to search for research papers based on specific topics.
 
-**Upload Papers:
+
+- **Upload Papers**:
+![WhatsApp Image 2025-04-20 at 21 00 43_40b0f3da](https://github.com/user-attachments/assets/0edf2cc2-604b-460a-a15e-aaf7c6572685)
 
 Users can drag and drop or browse PDF files for automatic summarization.
 
-**Fetch Papers via DOI or URL:
+- **Fetch Papers via DOI or URL**:
 
 Enter the DOI or URL of a paper to fetch it from repositories like arXiv and Crossref.
+![WhatsApp Image 2025-04-20 at 21 00 54_1299624c](https://github.com/user-attachments/assets/8b9a45d8-7eb8-4949-a024-49271bc13b12)
 
-**Generate Summaries:
+- **Generate Summaries**:
+![WhatsApp Image 2025-04-20 at 21 03 27_100ad40f](https://github.com/user-attachments/assets/dfffd3db-7831-435c-bcb8-e508c51ce5cf)
 
 The system will automatically generate a summary of the uploaded paper or fetched papers.
 
-**Download Audio Summary:
+- **Download Audio Summary**:
+![WhatsApp Image 2025-04-20 at 21 03 56_ac01840a](https://github.com/user-attachments/assets/c6b7c28f-caa7-4774-b758-c56e4c4bd618)
 
 After the paper is summarized, the system generates an audio podcast of the summary.
 
-**Output Examples
+# **Output Examples
 Summary Output Example
-sql
-Copy
+
 Title: "Deep Learning in AI"
 Summary: This paper explores the various applications of deep learning techniques in artificial intelligence. It covers neural networks, computer vision, and natural language processing advancements in AI systems...
 Audio Summary Output Example
-pgsql
-Copy
+![WhatsApp Image 2025-04-20 at 21 05 12_d310196e](https://github.com/user-attachments/assets/4bf636ee-eafd-41fa-871e-165d384fb8bd)
+
 Audio Version: AI-Predicted Summary is saved as `summary.mp3`.
 App Interface & Screenshots
 The web app provides an interactive interface to upload papers, visualize summaries, and download audio.

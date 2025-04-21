@@ -39,7 +39,6 @@ Download and install Python 3.11.x from the [official Python website](https://ww
 
 # Upgrade Pip
 
-```sh
 python -m pip install --upgrade pip
 Install Dependencies
 sh

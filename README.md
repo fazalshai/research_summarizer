@@ -31,13 +31,13 @@ Users can upload research papers, search for relevant academic papers based on t
 | `templates/`               | Contains HTML templates for the user interface.                                                           |
 | `static/`                  | Contains CSS and other static files for styling the web app.                                             |
 
-## Prerequisites
+# Prerequisites
 
-## Install Python 3.11.x
+# Install Python 3.11.x
 
 Download and install Python 3.11.x from the [official Python website](https://www.python.org/downloads/).
 
-## Upgrade Pip
+# Upgrade Pip
 
 ```sh
 python -m pip install --upgrade pip

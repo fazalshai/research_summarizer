@@ -67,10 +67,10 @@ Follow the steps below to get the project up and running:
    ```bash
    python app.py
    opens
-    1.locolhost:127.0.0.1:5000
+    1.localhost:127.0.0.1:5000
     2.your ip adress
 
-# **Output Examples
+# Output Examples
 Summary Output Example
 
 Title: "Deep Learning in AI"

@@ -2,7 +2,12 @@
 
 This project builds a **multi-agent system** that can find, analyze, and summarize research papers from various sources, organize them by topic, and generate audio podcasts discussing the findings.  
 Users can upload research papers, search for relevant academic papers based on topics, or use URLs and DOIs. The system processes them, organizes them by topics, and generates easy-to-understand summaries.
+# Demo Links
 
+- **Practical Demo (YouTube Link)**: [Watch the Demo](https://your-video-link)
+- **Theory & Code Explanation (YouTube Link)**: [Watch the Explanation](https://your-video-link)
+
+---
 ## Features
 
 - **Paper Search and Discovery**: Search for research papers based on topics and filter them by relevance or recency.
@@ -50,27 +55,27 @@ Copy
 python app.py
 This starts the web app where users can upload PDFs, fetch papers using DOIs or URLs, and view summaries or download audio versions.
 
-Search for Papers:
+**Search for Papers:
 
 Use the Search bar to search for research papers based on specific topics.
 
-Upload Papers:
+**Upload Papers:
 
 Users can drag and drop or browse PDF files for automatic summarization.
 
-Fetch Papers via DOI or URL:
+**Fetch Papers via DOI or URL:
 
 Enter the DOI or URL of a paper to fetch it from repositories like arXiv and Crossref.
 
-Generate Summaries:
+**Generate Summaries:
 
 The system will automatically generate a summary of the uploaded paper or fetched papers.
 
-Download Audio Summary:
+**Download Audio Summary:
 
 After the paper is summarized, the system generates an audio podcast of the summary.
 
-Output Examples
+**Output Examples
 Summary Output Example
 sql
 Copy

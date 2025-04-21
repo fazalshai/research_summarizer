@@ -50,11 +50,17 @@ The following libraries are used in this project:
 - `PyPDF2` - To extract text from PDFs.
 - `flask` - To build the Flask web application.
 - `bs4` - BeautifulSoup to parse HTML/XML documents.
+## Running the Project
 
-To install all the necessary dependencies, run the following command:
+Follow the steps below to get the project up and running:
 
-```sh
-pip install -r requirements.txt
+1. **Clone the Repository**
+
+   Clone the repository to your local machine using the following command:
+
+   ```bash
+   git clone https://github.com/your-username/research_summarizer.git
+
 
 
 

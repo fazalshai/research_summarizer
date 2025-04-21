@@ -38,22 +38,24 @@ Users can upload research papers, search for relevant academic papers based on t
 
 Download and install Python 3.11.x from the [official Python website](https://www.python.org/downloads/).
 
-# Upgrade Pip
+## Install Dependencies
 
-python -m pip install --upgrade pip
-Install Dependencies
-sh
-Copy
+The following libraries are used in this project:
+
+- `flask` - Web framework to create the server.
+- `requests` - To make HTTP requests for fetching papers.
+- `beautifulsoup4` - To parse and extract information from HTML.
+- `google-generativeai` - For generating summaries using the Gemini API.
+- `gTTS` - Google Text-to-Speech for generating audio summaries.
+- `PyPDF2` - To extract text from PDFs.
+- `flask` - To build the Flask web application.
+- `bs4` - BeautifulSoup to parse HTML/XML documents.
+
+To install all the necessary dependencies, run the following command:
+
+```sh
 pip install -r requirements.txt
-The requirements.txt file includes all necessary Python packages like flask, requests, beautifulsoup4, google-generativeai, and more.
 
-Running the Project
-Start the Flask Application:
-
-sh
-Copy
-python app.py
-This starts the web app where users can upload PDFs, fetch papers using DOIs or URLs, and view summaries or download audio versions.
 
 
 

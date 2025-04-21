@@ -32,7 +32,7 @@ Users can upload research papers, search for relevant academic papers based on t
 
 Download and install Python 3.11.x from the [official Python website](https://www.python.org/downloads/).
 
-### Upgrade Pip
+## Upgrade Pip
 
 ```sh
 python -m pip install --upgrade pip

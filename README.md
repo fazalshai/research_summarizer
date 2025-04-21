@@ -62,13 +62,11 @@ Follow the steps below to get the project up and running:
    git clone https://github.com/fazalshai/research_summarizer
 2. **Run app.py**
 
-   Clone the repository to your local machine using the following command:
+   This will start the web application, and you can access it on your browser at:
+'''bash
+Localhost: http://127.0.0.1:5000/ (for local access)
 
-   ```bash
-   python app.py
-   opens
-    1.localhost:127.0.0.1:5000
-    2.your ip adress
+Remote Access (Your IP address): http://<your-ip-address>:5000/ (replace <your-ip-address> with your actual machine's IP address)
 
 # Output Examples
 Summary Output Example

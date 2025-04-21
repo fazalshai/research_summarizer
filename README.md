@@ -63,8 +63,8 @@ Follow the steps below to get the project up and running:
 2. **Run app.py**
 
    This will start the web application, and you can access it on your browser at:
-'''bash
-Localhost: http://127.0.0.1:5000/ (for local access)
+```bash
+ Localhost: http://127.0.0.1:5000/ (for local access)
 
 Remote Access (Your IP address): http://<your-ip-address>:5000/ (replace <your-ip-address> with your actual machine's IP address)
 

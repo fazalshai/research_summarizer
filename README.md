@@ -53,7 +53,9 @@ sh
 Copy
 python app.py
 This starts the web app where users can upload PDFs, fetch papers using DOIs or URLs, and view summaries or download audio versions.
-#practical implementation images
+
+
+# practical implementation images
 - **Search for Papers:
 
 Use the Search bar to search for research papers based on specific topics.

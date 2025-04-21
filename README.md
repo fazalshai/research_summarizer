@@ -59,11 +59,16 @@ Follow the steps below to get the project up and running:
    Clone the repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/your-username/research_summarizer.git
+   git clone https://github.com/fazalshai/research_summarizer
+2. **Run app.py**
 
+   Clone the repository to your local machine using the following command:
 
-
-
+   ```bash
+   python app.py
+   opens
+    1.locolhost:127.0.0.1:5000
+    2.your ip adress
 
 # **Output Examples
 Summary Output Example

@@ -4,11 +4,11 @@ This project builds a **multi-agent system** that can find, analyze, and summari
 Users can upload research papers, search for relevant academic papers based on topics, or use URLs and DOIs. The system processes them, organizes them by topics, and generates easy-to-understand summaries.
 # Demo Links
 
-- **Practical Demo (YouTube Link)**: [Watch the Demo](https://your-video-link)
-- **Theory & Code Explanation (YouTube Link)**: [Watch the Explanation](https://your-video-link)
-
+- **Practical Demo**: [Watch the Demo](https://youtu.be/9sMl821pJMI) 
+- **Theory Explanation**: [Watch the Explanation](https://youtu.be/I4u3cVgUfpo)
+- **Code Explanation**:[Watch the Explanation](https://youtu.be/i3uPd2IQrUg)
 ---
-## Features
+# Features
 
 - **Paper Search and Discovery**: Search for research papers based on topics and filter them by relevance or recency.
 - **PDF Upload and Processing**: Upload PDFs and process them into readable text for summarization.
@@ -55,7 +55,7 @@ Copy
 python app.py
 This starts the web app where users can upload PDFs, fetch papers using DOIs or URLs, and view summaries or download audio versions.
 
-**Search for Papers:
+- **Search for Papers:
 
 Use the Search bar to search for research papers based on specific topics.
 

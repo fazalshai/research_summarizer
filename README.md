@@ -1,24 +1,30 @@
-# AI-Based HVAC Optimization System
+# Research Paper Summarization Multi-Agent System
 
-This project optimizes HVAC placement in a 3D building model using AI and FreeCAD.  
-Users can upload a CAD file, AI predicts the best HVAC placement, and the updated model is automatically generated.
+This project builds a **multi-agent system** that can find, analyze, and summarize research papers from various sources, organize them by topic, and generate audio podcasts discussing the findings.  
+Users can upload research papers, search for relevant academic papers based on topics, or use URLs and DOIs. The system processes them, organizes them by topics, and generates easy-to-understand summaries.
 
 ## Features
 
--   Extracts CAD features such as room dimensions and HVAC placements using FreeCAD.
--   Trains a neural network to predict optimal HVAC placement.
--   Applies AI-predicted HVAC placement to a FreeCAD model.
--   Provides an interactive 3D visualization of before and after HVAC placements.
--   Streamlit-based web app for easy user interaction.
+- **Paper Search and Discovery**: Search for research papers based on topics and filter them by relevance or recency.
+- **PDF Upload and Processing**: Upload PDFs and process them into readable text for summarization.
+- **DOI and URL Handling**: Fetch research papers directly from URLs or DOIs for processing.
+- **Topic Classification**: Classify papers into predefined topics.
+- **Summary Generation**: Generate short, accurate summaries of research papers.
+- **Cross-paper Synthesis**: Combine summaries from multiple papers into one cohesive document.
+- **Audio Summaries**: Generate audio versions of paper summaries for easier consumption.
 
 ## Project Structure
 
 | File                      | Description                                                                                              |
 | ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `extract_cad_features.py` | Extracts room dimensions and HVAC placements from FreeCAD.                                               |
-| `train_hvac_ai.py`        | Trains a neural network to predict HVAC placement.                                                       |
-| `apply_hvac_ai.py`        | Uses AI to optimize HVAC placement in a FreeCAD model.                                                   |
-| `app.py`                  | Streamlit web app for uploading CAD files, visualizing HVAC placements, and downloading optimized files. |
+| `agents/search_agent.py`   | Paper search agent for querying and filtering research papers by topics.                                  |
+| `agents/summarize_agent.py`| Summarizes research papers using the **Gemini** API for LLM integration.                                  |
+| `agents/audio_agent.py`    | Generates audio summaries using **gTTS** (Google Text-to-Speech).                                        |
+| `agents/classify_agent.py` | Classifies papers based on a user-provided list of topics.                                               |
+| `app.py`                  | Flask-based web app for uploading, searching, and summarizing papers.                                    |
+| `utils/paper_fetcher.py`   | Fetches research papers from URLs and DOIs using **arXiv** and **Crossref** APIs.                         |
+| `templates/`               | Contains HTML templates for the user interface.                                                           |
+| `static/`                  | Contains CSS and other static files for styling the web app.                                             |
 
 ## Prerequisites
 
@@ -30,137 +36,83 @@ Download and install Python 3.11.x from the [official Python website](https://ww
 
 ```sh
 python -m pip install --upgrade pip
-```
+Install Dependencies
+sh
+Copy
+pip install -r requirements.txt
+The requirements.txt file includes all necessary Python packages like flask, requests, beautifulsoup4, google-generativeai, and more.
 
-### Install Dependencies
+Running the Project
+Start the Flask Application:
 
-```sh
-pip install numpy pandas matplotlib scipy scikit-learn tensorflow torch torchvision torchaudio open3d streamlit flask boto3
-```
+sh
+Copy
+python app.py
+This starts the web app where users can upload PDFs, fetch papers using DOIs or URLs, and view summaries or download audio versions.
 
-### Install FreeCAD
+Search for Papers:
 
--   Download and install FreeCAD from the [official website](https://www.freecad.org/).
--   Ensure FreeCAD is added to Python’s system path.
+Use the Search bar to search for research papers based on specific topics.
 
-## Running the Project
+Upload Papers:
 
-### 1. Extract CAD Features
+Users can drag and drop or browse PDF files for automatic summarization.
 
-```sh
-python extract_cad_features.py
-```
+Fetch Papers via DOI or URL:
 
-This extracts room dimensions and HVAC placements from a FreeCAD file and saves the extracted data to `cad_features.json`.
+Enter the DOI or URL of a paper to fetch it from repositories like arXiv and Crossref.
 
-### 2. Train the AI Model
+Generate Summaries:
 
-```sh
-python train_hvac_ai.py
-```
+The system will automatically generate a summary of the uploaded paper or fetched papers.
 
-This trains a deep learning model to predict optimal HVAC placement and saves the trained model as `hvac_model.pth`.
+Download Audio Summary:
 
-### 3. Apply AI to Optimize HVAC Placement
+After the paper is summarized, the system generates an audio podcast of the summary.
 
-```sh
-python apply_hvac_ai.py
-```
+Output Examples
+Summary Output Example
+sql
+Copy
+Title: "Deep Learning in AI"
+Summary: This paper explores the various applications of deep learning techniques in artificial intelligence. It covers neural networks, computer vision, and natural language processing advancements in AI systems...
+Audio Summary Output Example
+pgsql
+Copy
+Audio Version: AI-Predicted Summary is saved as `summary.mp3`.
+App Interface & Screenshots
+The web app provides an interactive interface to upload papers, visualize summaries, and download audio.
 
-This loads the trained AI model, updates the HVAC placement in the FreeCAD model, and saves the optimized FreeCAD model as `HVAC_Building_Optimized.FCStd`.
+1. Home Page – Upload Papers
+Allows users to upload their own PDFs, view summaries, and download audio.
 
-### 4. Run the Streamlit Web App
+Screenshot File: screenshots/upload_page.png
 
-```sh
-streamlit run app.py
-```
+2. Search Page – Search Papers
+Search for papers based on topics, with filters like relevance and recency.
 
--   Upload a FreeCAD `.FCStd` file.
--   View before and after HVAC placement in an interactive 3D visualization.
--   Download the optimized `.FCStd` file.
+Screenshot File: screenshots/search_page.png
 
-## Output Examples
+3. Paper Summarization
+The app generates summaries of research papers and displays them.
 
-### Training Output Example
+Screenshot File: screenshots/summarized_page.png
 
-```
-Epoch [0/2000], Loss: 12.5489
-Epoch [200/2000], Loss: 0.6421
-Epoch [400/2000], Loss: 0.1152
-Model saved as hvac_model.pth
-```
+4. Audio Summary
+Download or listen to the audio version of the paper summary.
 
-### AI Predicted HVAC Placement
+Screenshot File: screenshots/audio_page.png
 
-```
-AI-Predicted HVAC Placement (x, y, z): [6.2, 4.8, 2.4]
-Current HVAC Position (Before Optimization): (8.0, 1.0, 2.5)
-Updated HVAC Position (After AI Optimization): (6.2, 4.8, 2.4)
-Updated CAD model saved as HVAC_Building_Optimized.FCStd
-```
+Notes
+DOI and URL Handling: The system fetches papers directly from repositories like arXiv or Crossref.
 
-### **App Interface & Screenshots**
+API Key: To use the Gemini API for LLM-powered summaries, you need an API key.
 
-The **Streamlit web app** provides an interactive interface for uploading CAD files, visualizing HVAC placements, and downloading the optimized file.
+Dependencies: Ensure all dependencies are installed via pip install -r requirements.txt.
 
-#### **1. Home Page – Upload CAD File**
+Future Improvements
+Multi-Paper Summarization: Improve cross-paper synthesis by handling more papers simultaneously.
 
-The homepage allows users to **upload a FreeCAD (`.FCStd`) file** for HVAC optimization.
+Interactive UI: Add more interactive features like saving papers and summaries for later access.
 
-**Screenshot File:** `screenshots/upload_page.png`  
-![Upload Page](screenshots/upload_page.png)
-
----
-
-#### **2. Before Optimization – Original HVAC Placement**
-
-After uploading the file, the app **visualizes the existing HVAC placement** in an **interactive 3D plot**.
-
-**Screenshot File:** `screenshots/before_optimization.png`  
-![Before Optimization](screenshots/before_optimization.png)
-
----
-
-#### **3. AI-Predicted HVAC Placement**
-
-The AI model predicts an **optimized HVAC placement**, which is displayed as text in the app.
-
-**Screenshot File:** `screenshots/ai_predicted.png`  
-![AI Predicted HVAC Placement](screenshots/ai_predicted.png)
-
----
-
-#### **4. After Optimization – Updated HVAC Placement**
-
-The optimized **HVAC placement is applied to the CAD model**, and the updated 3D visualization is shown.
-
-**Screenshot File:** `screenshots/after_optimization.png`  
-![After Optimization](screenshots/after_optimization.png)
-
----
-
-#### **5. Download Optimized CAD File**
-
-Users can **download the updated FreeCAD model** with the AI-optimized HVAC placement.
-
-**Screenshot File:** `screenshots/download_file.png`  
-![Download Optimized Model](screenshots/download_file.png)
-
----
-
-## Notes
-
--   Ensure FreeCAD is installed and added to Python’s path.
--   If the AI model fails to load, delete `hvac_model.pth` and retrain using `train_hvac_ai.py`.
--   The model hyperparameters can be adjusted in `train_hvac_ai.py` for better results.
-
-## Future Improvements
-
--   Enhance AI model with better feature engineering.
--   Optimize FreeCAD integration for real-time CAD modifications.
--   Add cloud-based processing (AWS/GCP) for large-scale HVAC optimizations.
-
-```
-
-```
-
+Topic Expansion: Integrate a broader set of topics for paper classification.

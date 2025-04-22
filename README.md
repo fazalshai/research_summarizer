@@ -15,7 +15,7 @@ Users can upload research papers, search for relevant academic papers based on t
 - **PDF Upload and Processing**: Upload PDFs and process them into readable text for summarization.
 - **DOI and URL Handling**: Fetch research papers directly from URLs or DOIs for processing.
 - **Topic Classification**: Classify papers into predefined topics.
-- **Summary Generation**: Generate short, accurate summaries of research papers.
+- **Summary Generation with LLM Integration**: Generate short, accurate summaries of research papers using Large Language Models (LLMs), such as the Gemini API, to understand and summarize complex research topics into concise, human-readable summaries.
 - **Cross-paper Synthesis**: Combine summaries from multiple papers into one cohesive document.
 - **Audio Summaries**: Generate audio versions of paper summaries for easier consumption.
 
